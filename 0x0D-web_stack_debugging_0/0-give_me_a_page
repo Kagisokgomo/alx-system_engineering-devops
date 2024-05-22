@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script fixes the Apache server to return a page containing "Hello Holberton"
+
+# Update package lists
+apt-get update
+
+# Install Apache
+apt-get install -y apache2
+
+# Start Apache service
+service apache2 start
+
+# Create a simple HTML page containing "Hello Holberton"
+echo "Hello Holberton" > /var/www/html/index.html
